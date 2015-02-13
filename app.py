@@ -14,8 +14,7 @@ def get_content_from_url(url):
 
 def get_text_from_html(txt):
     soup = BeautifulSoup(txt)
-    article = soup.find('div', class_='article-entry').find('p')
-    return article
+    return soup.find('div', class_='article-entry').find('p')
 
 def main():
     article = get_text_from_html(get_content_from_url(URL))
